@@ -1,7 +1,7 @@
 import { getProjects } from "@/app/utils/sanity.utils";
 
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "../../../components/ui/button";
 
 import { NewsletterHeader } from "@/app/@types/data-structure";
 

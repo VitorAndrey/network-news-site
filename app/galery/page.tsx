@@ -1,7 +1,10 @@
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { ResponsiveGallery } from "./components/responsive-gallery";
+
 export default function Galery() {
   return (
-    <section className="section grid place-items-center">
-      Em construção...
-    </section>
+    <ScrollArea className="section-no-padding">
+      <ResponsiveGallery />
+    </ScrollArea>
   );
 }

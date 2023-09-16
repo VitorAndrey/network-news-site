@@ -28,7 +28,7 @@
   .section {
     @apply h-[calc(100vh-65px)] w-full p-8;
   }
-  .newsletter {
+  .section-no-padding {
     @apply h-[calc(100vh-65px)] w-full;
   }
 }

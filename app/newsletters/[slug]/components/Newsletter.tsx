@@ -5,8 +5,8 @@ import { PortableText } from "@portabletext/react";
 
 import { News } from "./News";
 import { Button } from "@/components/ui/button";
-import { Newsletter } from "@/app/@types/data-structure";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Newsletter } from "@/app/@types/data-structure";
 
 import { ArrowLeft } from "lucide-react";
 
@@ -18,7 +18,7 @@ export function Newsletter({ newsletter }: NewsletterProps) {
   const { title, Introduction, footer, cover, news } = newsletter;
 
   return (
-    <ScrollArea className="newsletter relative">
+    <ScrollArea className="section-no-padding relative">
       <Link
         href="/projects"
         className="lg:absolute lg:block hidden top-6 left-6"

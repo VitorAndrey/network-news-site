@@ -1,4 +1,4 @@
-import { NewlettersLinks } from "@/components/newsletters-links";
+import { NewlettersLinks } from "@/app/projects/components/newsletters-links";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Projects() {
