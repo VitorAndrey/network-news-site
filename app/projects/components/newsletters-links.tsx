@@ -1,4 +1,4 @@
-import { getProjects } from "@/app/utils/sanity.utils";
+import { fetchInSanity } from "@/app/utils/sanity.utils";
 
 import Link from "next/link";
 import { Button } from "../../../components/ui/button";
@@ -6,7 +6,7 @@ import { Button } from "../../../components/ui/button";
 import { NewsletterHeader } from "@/app/@types/data-structure";
 
 export async function NewlettersLinks() {
-  const newsletters = await getProjects(
+  const newsletters = await fetchInSanity(
     `*[_type == "newsletter"]{title, slug, _createdAt} | order(_createdAt desc)`
   );
 

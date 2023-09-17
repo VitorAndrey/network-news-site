@@ -1,5 +1,5 @@
 import { Newsletter } from "./components/Newsletter";
-import { getProjects } from "@/app/utils/sanity.utils";
+import { fetchInSanity } from "@/app/utils/sanity.utils";
 
 interface ParamsTypes {
   params: {
@@ -8,7 +8,7 @@ interface ParamsTypes {
 }
 
 export default async function NewsLetterSlug({ params }: ParamsTypes) {
-  const newsletter = await getProjects(
+  const newsletter = await fetchInSanity(
     `*[_type == "newsletter" && slug.current == "${params.slug}"][0]{
       title,
       Introduction,
