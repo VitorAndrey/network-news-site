@@ -28,7 +28,15 @@ export function ResponsiveGallery({ assets }: ResponsiveGalleryProps) {
   return (
     <section className="p-8">
       <ResponsiveMasonry
-        columnsCountBreakPoints={{ 350: 1, 426: 2, 900: 3, 1220: 4, 2000: 5 }}
+        columnsCountBreakPoints={{
+          350: 1,
+          426: 2,
+          900: 3,
+          1220: 4,
+          1700: 5,
+          2200: 6,
+          2700: 7,
+        }}
       >
         <Masonry gutter="1rem">
           {assets ? (
