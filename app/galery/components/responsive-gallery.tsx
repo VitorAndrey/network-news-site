@@ -1,9 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 
 import Image from "next/image";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
+import { v4 as uuidv4 } from "uuid";
 
 // import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
@@ -41,10 +43,10 @@ export function ResponsiveGallery({ assets }: ResponsiveGalleryProps) {
         <Masonry gutter="1rem">
           {assets ? (
             assets.map((item, i) => (
-              <>
+              <Fragment key={uuidv4()}>
                 {item.type === "image" && (
                   <Image
-                    key={i}
+                    key={uuidv4()}
                     src={item.asset}
                     width={300}
                     height={200}
@@ -56,6 +58,7 @@ export function ResponsiveGallery({ assets }: ResponsiveGalleryProps) {
                 )}
                 {item.type === "video" && (
                   <video
+                    key={uuidv4()}
                     className="rounded-lg cursor-pointer"
                     loop
                     autoPlay
@@ -66,7 +69,7 @@ export function ResponsiveGallery({ assets }: ResponsiveGalleryProps) {
                     <source src={item.asset} type="video/mp4" />
                   </video>
                 )}
-              </>
+              </Fragment>
             ))
           ) : (
             <p>Galeria Vazia</p>
