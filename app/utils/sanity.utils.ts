@@ -8,5 +8,8 @@ export async function fetchInSanity(query: string) {
     useCdn: true,
   });
 
-  return client.fetch(groq`${query}`, { next: { revalidate: 10 } });
+  return client.fetch(groq`${query}`, {
+    next: { revalidate: 10 },
+    cache: "no-store",
+  });
 }
