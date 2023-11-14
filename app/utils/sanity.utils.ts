@@ -5,11 +5,11 @@ export async function fetchInSanity(query: string) {
     projectId: "l0ez06ph",
     dataset: "production",
     apiVersion: "2023-06-24",
-    useCdn: true,
+    useCdn: false,
   });
 
   return client.fetch(groq`${query}`, {
-    next: { revalidate: 10 },
+    next: { revalidate: 10000 },
     cache: "no-store",
   });
 }
