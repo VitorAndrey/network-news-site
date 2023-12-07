@@ -9,7 +9,7 @@ export async function fetchInSanity(query: string) {
   });
 
   return client.fetch(groq`${query}`, {
-    next: { revalidate: 10 },
+    next: { revalidate: 11 },
     cache: "no-store",
   });
 }
