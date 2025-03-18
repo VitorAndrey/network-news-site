@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 
-import { News } from "@/app/@types/data-structure";
+import { News as NewsType } from "@/app/@types/data-structure";
 
 type NewsProps = {
-  newsInfo: News;
+  newsInfo: NewsType;
 };
 
 export function News({ newsInfo }: NewsProps) {

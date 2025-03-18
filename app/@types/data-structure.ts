@@ -9,6 +9,11 @@ export type NewsletterHeader = {
 
 export type Newsletter = {
   title: string;
+  slug: {
+    current: string;
+    _type: string;
+  };
+  _createdAt: string;
   Introduction: [];
   footer: {
     title: string;
@@ -17,7 +22,7 @@ export type Newsletter = {
   cover: {
     image: string;
   };
-  news: [];
+  news: News[];
 };
 
 export type News = {

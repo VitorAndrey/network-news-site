@@ -6,12 +6,12 @@ import { PortableText } from "@portabletext/react";
 import { News } from "./News";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Newsletter } from "@/app/@types/data-structure";
+import { Newsletter as NewsLetterType } from "@/app/@types/data-structure";
 
 import { ArrowLeft } from "lucide-react";
 
 type NewsletterProps = {
-  newsletter: Newsletter;
+  newsletter: NewsLetterType;
 };
 
 export function Newsletter({ newsletter }: NewsletterProps) {
